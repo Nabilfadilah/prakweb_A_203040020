@@ -1,0 +1,88 @@
+<?php
+require 'php/functions.php';
+
+// koneksi ke DB & pilih Database
+$conn = mysqli_connect('localhost', 'root', '', 'prakweb_a_203040020_pw');
+
+// Query isi tabel mahsiswa 
+$result = mysqli_query($conn, "SELECT * FROM buku");
+
+// ubah data ke dalam array 
+// $row = mysqli_fetch_row($result); // array numerik
+// $row = mysqli_fetch_assoc($result); // array associative
+// $row = mysqli_fetch_array($result); // keduanya
+
+$rows = [];
+while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+}
+
+// tampung ke variabel buku
+$buku = $rows;
+
+?>
+
+<!-- html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum PW</title>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- tabel -->
+
+<body style="background-image: url(img/bg2.jpg); background-size: 10px;">
+
+    <div class="navbar">
+        <h1>Hallo Semuanya ini tabel data buku gusy</h1>
+    </div>
+
+    <div class="container">
+
+        <table class="table table-bordered border-primary align-middle justify text-center">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Gambar</th>
+                    <th>Penulis</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+
+            <?php $i = 1; ?>
+            <?php foreach ($buku as $row) : ?>
+                <tr>
+                    <td><?= $i; ?></td>
+                    <td><?= $row['nama']; ?></td>
+                    <td><img src="img/<?= $row['gambar']; ?>" width="100"></td>
+                    <td><?= $row['penulis']; ?></td>
+
+                    <td>
+                        <button class="tombol-ubah">
+                            <div class="update"><a href="php/ubah.php?id=<?= $row['id']; ?>">Ubah</a></div>
+                        </button>
+                        <button class="tombol-hapus">
+                            <div class="delete"><a href="php/hapus.php? $tp['id']; ?>" onclick="return confirm('Hapus Data??')">Hapus</a></div>
+                        </button>
+                        <button class="tambah">
+                            <a href="php/tambah.php">Tambah Data</a>
+                        </button>
+                    </td>
+                </tr>
+                <?php $i++; ?>
+            <?php endforeach; ?>
+    </div>
+
+</body>
+
+</html>

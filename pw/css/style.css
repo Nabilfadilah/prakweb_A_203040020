@@ -1,0 +1,16 @@
+.tombol-ubah {
+    background-color: green;
+}
+
+.tombol-hapus {
+    background-color: red;
+}
+
+.tambah {
+    background-color: yellow;
+}
+
+/* mavbar  */
+.navbar {
+    text-align: center;
+}
