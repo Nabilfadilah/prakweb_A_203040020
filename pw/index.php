@@ -39,10 +39,10 @@ $buku = $rows;
 
 <!-- tabel -->
 
-<body style="background-image: url(img/bg2.jpg); background-size: 10px;">
+<body style="background-image: url(img/bg2.jpg); background-size: 15px;">
 
     <div class="navbar">
-        <h1>Hallo Semuanya ini tabel data buku gusy</h1>
+        <h1>Daftar Buku Terlaris 2022</h1>
     </div>
 
     <div class="container">
