@@ -20,6 +20,8 @@ function query($sql)
     return $rows;
 }
 
+
+
 // function untuk menambah data produk
 function tambah($data)
 {
@@ -29,10 +31,19 @@ function tambah($data)
     $gambar = htmlspecialchars($data['gambar']);
     $penulis = htmlspecialchars($data['penulis']);
 
-    $query = "INSERT INTO buku VALUES
-                ('', '$nama', '$gambar', '$penulis')";
+    // $gambar = upload();
+    // if (!$gambar) {
+    //     return false;
+    // }
 
-    mysqli_query($conn, $query);
+    $query = "INSERT INTO buku 
+                VALUES
+                (NULL, 
+                '$nama', 
+                '$gambar', 
+                '$penulis')";
+
+    mysqli_query($conn, $query) or die(mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
@@ -41,10 +52,11 @@ function tambah($data)
 function hapus($id)
 {
     $conn = koneksi();
-    mysqli_query($conn, "DELETE * FROM buku WHERE id = $id");
+    mysqli_query($conn, "DELETE * FROM buku WHERE id = $id") or die(mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
+
 
 // function untuk mengubah data produk
 function ubah($data)
