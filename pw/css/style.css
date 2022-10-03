@@ -1,3 +1,4 @@
+/* tombol */
 .tombol-ubah {
     background-color: green;
 }
@@ -10,7 +11,13 @@
     background-color: yellow;
 }
 
-/* mavbar  */
-.navbar {
+/* container  */
+.container {
     text-align: center;
+    
+}
+
+/* table */
+.table {
+    background-color: antiquewhite;
 }

@@ -41,11 +41,8 @@ $buku = $rows;
 
 <body style="background-image: url(img/bg2.jpg); background-size: 15px;">
 
-    <div class="navbar">
-        <h1>Daftar Buku Terlaris 2022</h1>
-    </div>
-
     <div class="container">
+        <h1>Daftar Buku Terlaris 2022</h1>
 
         <table class="table table-bordered border-primary align-middle justify text-center">
             <thead>
