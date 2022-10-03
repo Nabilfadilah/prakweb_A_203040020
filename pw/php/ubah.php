@@ -40,7 +40,7 @@ if (isset($_POST['ubah'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body style="background-image: url(../assets/slider/ubah1.jpg); background-size: 512px;">
+<body style="background-image: url(../img/slider/ubah1.jpg); background-size: 512px;">
     <section id="tambah" class="tambah">
         <div class="container" style="margin-top: 100px;">
             <div class="row">
