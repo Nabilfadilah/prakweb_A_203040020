@@ -32,7 +32,7 @@ $buku = $rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum PW</title>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,7 +42,7 @@ $buku = $rows;
 <body style="background-image: url(img/bg2.jpg); background-size: 15px;">
 
     <div class="container">
-        <h1>Daftar Buku Terlaris 2022</h1>
+        <h1 class="judul">Daftar Buku Terlaris 2022</h1>
 
         <table class="table table-bordered border-primary align-middle justify text-center">
             <thead>
