@@ -131,11 +131,21 @@ if (isset($_POST["tambah"])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepatu</title>
-    <link rel="stylesheet" href="../pw2021_203040008/latihan4b/css/style.css">
-    <style>
+    <title>Tambah Data</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <style>
         section {
             min-height: 420px;
         }
@@ -156,10 +166,54 @@ if (isset($_POST["tambah"])) {
             background-color: blue;
             font-weight: bold;
         }
-    </style>
+    </style> -->
 </head>
 
-<body>
+<body style="background-image: url(../img/slider/tambah.jpg); background-size: 507px;">
+    <section id="tambah" class="tambah">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col offset-m3 s6">
+                    <form action="" method="POST">
+                        <div class="card-panel m3 s6">
+                            <h5 style="text-align: center;">Form Tambah Data</h5>
+
+                            <div class="input-field">
+                                <input type="text" name="nama" id="nama" required class="validate" autocomplete="off">
+                                <label for="nama" class="active">Nama :</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" name="gambar" id="gambar" required class="validate" autocomplete="off">
+                                <label for="gambar" class="active">Gambar :</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" name="penulis" id="penulis" required class="validate" autocomplete="off">
+                                <label for="penulis" class="active">Penulis :</label>
+                            </div>
+
+                            <button type="submit" name="tambah">Tambah Data!</button>
+                            <button type="submit">
+                                <a href="../index.php" style="text-decoration: none; color: black;">Kembali</a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </form>
+
+</body>
+
+</html>
+
+
+
+
+<!-- 
+<body style="background-image: url(../assets/slider/tambah.jpg); background-size: 507px;">
     <h1>Form Tambah Data Produk</h1>
     <form action="" method="post">
         <ul>
@@ -185,4 +239,4 @@ if (isset($_POST["tambah"])) {
 
 </body>
 
-</html>
+</html> -->
