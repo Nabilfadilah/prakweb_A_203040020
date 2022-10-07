@@ -44,7 +44,7 @@ $buku = $rows;
     <div class="container">
         <h1 class="judul">Daftar Buku Terlaris 2022</h1>
 
-        <table class="table table-bordered border-primary align-middle justify text-center">
+        <table class="table table-bordered border-primary align-middle clear">
             <thead>
                 <tr>
                     <th>No</th>
