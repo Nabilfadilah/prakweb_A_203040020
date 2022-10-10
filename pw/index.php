@@ -69,7 +69,7 @@ $buku = $rows;
                             <div class="update"><a href="php/ubah.php?id=<?= $row['id']; ?>">Ubah</a></div>
                         </button>
                         <button class="tombol-hapus">
-                            <div class="delete"><a href="php/hapus.php? $tp['id']; ?>" onclick="return confirm('Hapus Data??')">Hapus</a></div>
+                            <div class="delete"><a href="php/hapus.php?id=<?= $row['id']; ?>" onclick="return confirm('Hapus Data??')">Hapus</a></div>
                         </button>
                         <button class="tambah">
                             <a href="php/tambah.php">Tambah Data</a>
